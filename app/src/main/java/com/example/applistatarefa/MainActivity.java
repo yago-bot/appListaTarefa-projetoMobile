@@ -5,7 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.widget.EditText;
-// -------------------------------------
+
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
