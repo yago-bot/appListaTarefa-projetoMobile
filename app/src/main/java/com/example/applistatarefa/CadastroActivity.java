@@ -1,12 +1,12 @@
 package com.example.applistatarefa;
 
-import android.content.Intent; // Importe a classe Intent
+import android.content.Intent; 
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView; // Importe a classe TextView
+import android.widget.TextView; 
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
