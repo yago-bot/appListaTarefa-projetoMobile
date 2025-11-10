@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
-// Remova o Toast e AlertDialog, o Adapter não vai mais lidar com isso
-// import android.widget.Toast;
-// import androidx.appcompat.app.AlertDialog;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,26 +16,24 @@ import java.util.ArrayList;
 
 public class TarefaAdapter extends ArrayAdapter<Tarefa> {
 
-    // --- 1. CRIE A INTERFACE ("PONTE") ---
-    // Esta interface será a "ponte" para a MainActivity
+    
     public interface OnTarefaClickListener {
         void onEditClick(Tarefa tarefa, int position);
         void onConcluirClick(Tarefa tarefa, int position);
     }
-    // ------------------------------------
+    
 
-    // --- 2. ADICIONE UMA VARIÁVEL PARA O LISTENER ---
+    
     private OnTarefaClickListener listener;
-    // ------------------------------------
+    
 
 
-    // --- 3. ATUALIZE O CONSTRUTOR ---
-    // Ele agora precisa receber o 'listener' da MainActivity
+    
     public TarefaAdapter(Context context, ArrayList<Tarefa> tarefas, OnTarefaClickListener listener) {
         super(context, 0, tarefas);
-        this.listener = listener; // Salva o listener
+        this.listener = listener; 
     }
-    // ------------------------------------
+    
 
     @NonNull
     @Override
@@ -60,34 +55,34 @@ public class TarefaAdapter extends ArrayAdapter<Tarefa> {
         tvData.setText(tarefa.getData());
         tvHora.setText(tarefa.getHora());
 
-        // Seu código para riscar o texto (está correto)
+      
         if (tarefa.isConcluida()) {
             tvTexto.setPaintFlags(tvTexto.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             btnConcluir.setText("Restaurar");
-            // Corrija esta linha - você tinha holo_green_light
+            
             btnConcluir.setTextColor(getContext().getResources().getColor(android.R.color.holo_orange_light));
         } else {
             tvTexto.setPaintFlags(tvTexto.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
             btnConcluir.setText("Concluir");
-            btnConcluir.setTextColor(getContext().getResources().getColor(android.R.color.holo_green_dark)); // Mudei para dark
+            btnConcluir.setTextColor(getContext().getResources().getColor(android.R.color.holo_green_dark)); 
         }
 
 
-        // --- 4. ATUALIZE OS LISTENERS ---
+       
         btnConcluir.setOnClickListener(v -> {
             if (listener != null) {
-                // Avisa a MainActivity que o botão "Concluir" foi clicado
+                
                 listener.onConcluirClick(tarefa, position);
             }
         });
 
         btnEditar.setOnClickListener(v -> {
             if (listener != null) {
-                // Avisa a MainActivity que o botão "Editar" foi clicado
+               
                 listener.onEditClick(tarefa, position);
             }
         });
-        // ------------------------------------
+        
 
         return convertView;
     }
