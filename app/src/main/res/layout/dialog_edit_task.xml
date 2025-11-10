@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <EditText
+        android:id="@+id/et_edit_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_hint_task"
+        android:minHeight="48dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_edit_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_set_date"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@android:color/holo_blue_light"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/tv_edit_hora"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/main_set_time"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@android:color/holo_blue_light"
+            android:clickable="true" />
+    </LinearLayout>
+
+</LinearLayout>

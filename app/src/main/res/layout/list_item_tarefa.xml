@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/fundo_card_cinza_escuro"  android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_item_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto da Tarefa"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"  android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/tv_item_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dd/MM/yyyy"
+            android:textColor="#757575"  android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_item_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HH:mm"
+            android:textColor="#757575"  android:layout_marginLeft="16dp"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btn_item_editar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Editar"
+            android:textSize="12sp"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@android:color/holo_blue_dark" /> <Button
+        android:id="@+id/btn_item_concluir"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Concluir"
+        android:textSize="12sp"
+        android:textColor="@android:color/holo_green_dark" style="?android:attr/borderlessButtonStyle" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">List-it</string>
+
+
+    <string name="login_logo_text">List-it</string>
+    <string name="login_title">Login</string>
+    <string name="login_hint_user">Usuário (e-mail)</string>
+    <string name="login_hint_password">Senha</string>
+    <string name="login_checkbox_remember">Lembrar de mim</string>
+    <string name="login_button_enter">Entrar</string>
+    <string name="login_text_register">Não tem conta? Cadastre-se</string>
+
+
+    <string name="main_hint_task">Digite uma nova tarefa</string>
+    <string name="main_set_date">Definir Data</string>
+    <string name="main_set_time">Definir Hora</string>
+    <string name="main_add_button">Adicionar Tarefa</string>
+    <string name="main_task_added_success">Tarefa adicionada!</string>
+    <string name="main_error_no_text">Por favor, digite o texto da tarefa.</string>
+    <string name="main_error_no_date">Por favor, defina a data.</string>
+    <string name="main_error_no_time">Por favor, defina a hora.</string>
+
+</resources>
